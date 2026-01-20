@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Menu, X, Zap, Heart, Radar, Brain, Moon, Eye, Leaf, Pill, ArrowRight, ChevronRight } from 'lucide-react';
-import LanguageSwitcher from './LanguageSwitcher';
+
 
 // Menu Configuration
 const menuConfig: Record<string, {
@@ -241,7 +241,7 @@ export default function Navigation() {
 
           {/* Right Side: CTA & Language */}
           <div className="hidden lg:flex items-center gap-6 ml-8">
-            <LanguageSwitcher />
+
             <Link
               href="/contact"
               className="px-5 py-2.5 bg-[#003366] !text-white text-sm font-medium hover:bg-[#002855] transition-colors"

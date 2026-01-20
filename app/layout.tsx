@@ -76,7 +76,7 @@ export default function RootLayout({
         <CookieConsent />
         <Footer />
         {/* Hidden internal container for Google Translate widget */}
-        <div id="google_translate_element_hidden" className="hidden" aria-hidden="true" />
+
       </body>
     </html>
   );
