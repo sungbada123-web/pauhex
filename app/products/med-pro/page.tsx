@@ -47,7 +47,7 @@ export default function MedProPage() {
                                     href="/contact"
                                     className="px-8 py-4 bg-[#003366] text-white text-sm font-bold uppercase tracking-wider hover:bg-[#179A97] transition-all rounded-[2px] inline-flex items-center gap-2"
                                 >
-                                    Reqest Demo
+                                    Request Demo
                                     <ArrowRight className="w-4 h-4" />
                                 </Link>
                                 <Link
@@ -112,7 +112,7 @@ export default function MedProPage() {
                             <h3 className="text-2xl font-light text-[#003366] mb-4">Edge <span className="font-semibold">Verification</span></h3>
                             <p className="text-[#5A6A85] leading-relaxed font-light">
                                 Built-in RK3588 NPU processes computer vision verification locally.
-                                It "sees" if the pill was actually taken, not just if the drawer was opened.
+                                Computer vision verifies ingestion events in real-time, confirming if the pill was actually taken, not just if the drawer was opened.
                             </p>
                         </div>
                         {/* Feature 3 */}

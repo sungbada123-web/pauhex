@@ -35,7 +35,7 @@ export default function DownloadsPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-bold text-[#003366] mb-1">{doc.title}</h3>
-                                        <span className="text-xs uppercase tracking-widest text-gray-400 font-bold">{doc.type} ?{doc.size}</span>
+                                        <span className="text-xs uppercase tracking-widest text-gray-400 font-bold">{doc.type} • {doc.size}</span>
                                     </div>
                                 </div>
                                 <button className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-[#179A97]">

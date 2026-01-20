@@ -89,7 +89,7 @@ export default function Home() {
               <div className="text-[#179A97] font-bold tracking-[0.3em] uppercase text-xs mb-8">System Architecture</div>
               <h2 className="text-6xl font-light text-[#003568] mb-10 leading-[1.1]">
                 Distributed <br />
-                <span className="font-semibold">AI Intelligence Hub</span>
+                <span className="font-semibold">AI Hub</span>
               </h2>
               <p className="text-xl text-[#555555] mb-12 font-light leading-relaxed">
                 Experience the secure core of the health ecosystem. Pauhex Hub utilizes high-performance NPU architecture

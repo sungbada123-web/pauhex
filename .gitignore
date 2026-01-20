@@ -38,6 +38,20 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+
+# Project Documentation & Logs
+*.md
+!README.md
+*.pptx
+*.pdf
+deploy_to_github.ps1
+
+# Scripts & Data processing
+*.py
+extracted_content.md
+
+# OS Files
+.DS_Store
+Thumbs.db
 
 .vercel

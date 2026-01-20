@@ -11,7 +11,7 @@ export default function FAQPage() {
                 <div className="space-y-4">
                     {[
                         "How do I set up the Pauhex Pro-Dispense?",
-                        "Is the Vital Reader safe for pets?",
+                        "Is the Vital Radar safe for pets?",
                         "What is the battery life of the wireless sensors?",
                         "Does Pauhex integrate with Apple Health?"
                     ].map((q, i) => (

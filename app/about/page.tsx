@@ -69,9 +69,7 @@ export default function AboutPage() {
                         </h2>
                         <div className="max-w-3xl mx-auto text-[#555555] font-light text-lg leading-relaxed space-y-6">
                             <p>
-                                Health is the cornerstone built on medication safety and stable vital signs. However,
-                                hundreds of millions of seniors worldwide face complex medication management
-                                and invisible daily safety risks.
+                                Medication safety and stable vitals are the cornerstones of health. However, hundreds of millions of seniors worldwide face complex medication management and invisible daily safety risks.
                             </p>
                             <p>
                                 PAUHEX develops AI-enforced dispensing algorithms and mmWave radar monitoring.
