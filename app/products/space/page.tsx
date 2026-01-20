@@ -2,6 +2,7 @@
 
 import { Leaf, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function SpacePage() {
     return (
@@ -24,9 +25,9 @@ export default function SpacePage() {
                         </Link>
                     </div>
                     <div className="relative h-[500px] bg-gray-50 flex items-center justify-center rounded-lg overflow-hidden shadow-2xl border border-gray-100">
-                        <Image 
-                            src="/images/products/space-control.png" 
-                            alt="Pauhex Space Environmental Control Unit" 
+                        <Image
+                            src="/images/products/space-control.png"
+                            alt="Pauhex Space Environmental Control Unit"
                             fill
                             className="object-cover"
                             quality={100}
