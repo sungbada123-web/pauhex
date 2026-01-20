@@ -76,7 +76,7 @@ export default function AboutPage() {
                                 Our products aim to transform complex medical technology into a minimalist home experience.
                             </p>
                             <p>
-                                We believe: Smart care should not be cold machine alerts, but silent protection�?                                safeguarding a quality life without changing daily habits.
+                                We believe: Smart care should not be cold machine alerts, but silent protection — safeguarding a quality life without changing daily habits.
                             </p>
                         </div>
                     </div>
