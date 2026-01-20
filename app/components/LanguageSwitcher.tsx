@@ -79,10 +79,31 @@ export default function LanguageSwitcher() {
     }, []);
 
     const changeLanguage = (langCode: string) => {
+        // 0. Update State
         setCurrentLang(langCode);
         setIsOpen(false);
-        document.cookie = `googtrans=/en/${langCode}; path=/`;
-        document.cookie = `googtrans=/en/${langCode}; path=/; domain=${window.location.hostname}`;
+
+        // 1. Clear existing cookies to avoid conflicts (host, root, and dot-prefixed)
+        const domain = window.location.hostname;
+        const cookieOptions = [
+            'path=/',
+            `path=/; domain=${domain}`,
+            `path=/; domain=.${domain}` // Catch-all for subdomains
+        ];
+
+        cookieOptions.forEach(opt => {
+            document.cookie = `googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; ${opt}`;
+        });
+
+        // 2. Set new cookie
+        // Format: /sourceLang/targetLang
+        // If switching back to English (source), we effectively reset it, but setting /en/en helps keep state consistent.
+        const cookieValue = `/en/${langCode}`;
+
+        document.cookie = `googtrans=${cookieValue}; path=/`;
+        document.cookie = `googtrans=${cookieValue}; path=/; domain=${domain}`;
+
+        // 3. Reload to trigger Google Translate
         window.location.reload();
     };
 
