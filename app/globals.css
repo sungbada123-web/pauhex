@@ -1,0 +1,275 @@
+@import "tailwindcss";
+
+:root {
+  /* ============================================
+     LOEWENSTEIN MEDICAL PIXEL-PERFECT COLOR SYSTEM
+     ============================================ */
+
+  /* Primary Brand Colors */
+  --primary: #003366;
+  /* Loewenstein Deep Blue */
+  --primary-hover: #002855;
+  /* Darker for hover states */
+  --accent: #009999;
+  /* Medical Teal */
+  --accent-hover: #007777;
+  /* Darker teal for hover */
+
+  /* Background System */
+  --bg-primary: #FFFFFF;
+  /* Main background */
+  --bg-secondary: #F6F8FA;
+  /* Section contrast */
+  --bg-tertiary: #EDF2F7;
+  /* Card backgrounds */
+
+  /* Text Colors */
+  --text-primary: #1A202C;
+  /* Headings, strong text */
+  --text-secondary: #4A5568;
+  /* Body text */
+  --text-muted: #718096;
+  /* Subtle, captions */
+  --text-light: #A0AEC0;
+  /* Very light, disabled */
+
+  /* Border & Divider */
+  --border: #E2E8F0;
+  /* Standard borders */
+  --border-strong: #CBD5E0;
+  /* Emphasized borders */
+
+  /* System Tokens */
+  --container-max-width: 1280px;
+  --nav-height: 80px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --radius-sm: 2px;
+  /* Minimal radius - Loewenstein style */
+
+  /* Custom Spacing - For Visual Breathing Room */
+  --spacing-80: 20rem;
+  /* 320px */
+  --spacing-100: 25rem;
+  /* 400px */
+}
+
+/* Spacing - 1/10th reduction (40px) */
+.py-10 {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  font-family: var(--font-inter), system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Scale - Loewenstein Precision */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+/* 48px */
+h2 {
+  font-size: 2.25rem;
+}
+
+/* 36px */
+h3 {
+  font-size: 1.5rem;
+}
+
+/* 24px */
+h4 {
+  font-size: 1.25rem;
+}
+
+/* 20px */
+
+p {
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+/* Link & Button Base */
+@layer base {
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+}
+
+/* Button System - Sharp Corners */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: var(--primary);
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: var(--bg-tertiary);
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* Container - Responsive with Natural Margins */
+.container {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 100%;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Card System - Minimal Shadow */
+.card {
+  background: var(--bg-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Section Spacing */
+.section {
+  padding: 80px 0;
+}
+
+.section-alt {
+  background: var(--bg-secondary);
+}
+
+/* Grid Utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Accessibility & Brand Contrast Rules */
+[class*="bg-[#003366]"],
+[class*="bg-[#003568]"],
+[class*="bg-primary"],
+.bg-primary {
+  color: #FFFFFF !important;
+}
+
+[class*="bg-[#003366]"] p,
+[class*="bg-[#003568]"] p,
+[class*="bg-primary"] p,
+.bg-primary p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+[class*="bg-[#003366]"] h1,
+[class*="bg-[#003366]"] h2,
+[class*="bg-[#003366]"] h3,
+[class*="bg-primary"] h1,
+[class*="bg-primary"] h2,
+[class*="bg-primary"] h3 {
+  color: #FFFFFF !important;
+}

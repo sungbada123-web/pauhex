@@ -1,0 +1,19 @@
+# AI Coding Assistant Rules
+
+## Daily Reporting Standard
+Every time the user asks for a "summary" (总结) or "report" (日报), the assistant MUST provide a highly comprehensive report following the `/daily-report` workflow.
+
+### Content Requirements:
+1. **Accomplishments (已完成)**: Detailed list of actions taken, files modified, and successful outcomes.
+2. **Pending/Blocked (未完成/卡点)**: Explicitly state what was not finished, why (technical issues, time, etc.), and the exact next steps for tomorrow.
+3. **Experience & Lessons (经验积累)**: Document technical insights, prompt engineering breakthroughs, or system-specific quirks discovered during the session.
+4. **Project Log**: Always sync the summary into the root `Project_Log.md` file.
+
+### Tone:
+- Professional, technical, and transparent.
+- Use bilingual (Chinese/English) headers for clarity.
+
+## Command Execution Safety
+1. **No Indefinite Waiting**: For external tools (e.g., `winget`, installers), NEVER wait passively for more than 60 seconds without checking output.
+2. **Proactive Polling**: If a command takes time, use `command_status` periodically to check output delta, rather than setting a huge `WaitDurationSeconds`.
+3. **Fail Fast**: If an interactive command (like an installer) seems stuck or requests an unseen prompt, CANCEL it immediately and ask the user for manual intervention, rather than "waiting it out".
